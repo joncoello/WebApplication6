@@ -1,0 +1,23 @@
+﻿@model WebApplication6.Models.ContactModel
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Contact Details</h2>
+
+@using (Html.BeginForm("Save"))
+{
+
+    <div>
+        @Html.Label("ContactID") @Html.Display("ContactID") @Html.Hidden("ContactID")
+    </div>
+    <div>
+        @Html.Label("FirstName") @Html.Editor("FirstName")
+    </div>
+    <div>
+        @Html.Label("LastName") @Html.Editor("LastName")
+    </div>
+
+    <input type="submit" value="save" />
+
+}
